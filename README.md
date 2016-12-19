@@ -1,4 +1,4 @@
-# magic-calculator
+# Magic Calculator
 Final project for Fcode C Training.
 
 **Magic Calculator** is a C program that can solve all operations by one line.
