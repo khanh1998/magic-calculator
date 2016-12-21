@@ -26,3 +26,12 @@ or
 not
 &       two hidden equations
 &&      three hidden equations
+A       value
+B       value
+C       value
+D       value
+E       value
+F       value
+X       value
+Y       value
+M       value
