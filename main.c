@@ -6,6 +6,6 @@ void printREADME() {
 
 int main(void) {
     printREADME();
-    
+
     return 0;
 }

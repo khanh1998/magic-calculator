@@ -1,0 +1,28 @@
++       add
+-       sub
+*       mul
+/       div
+%       mod
+^       exp
+!       factorial
+max     maximum of two value
+min     minimum of two value
+sqrt    square root
+cbrt    cube root
+abs     absolute value
+x       basic equation
+x^2     quadratic equation
+x^3     cubic equation
+sin     sin
+cos     cosin
+tan     tan
+cot     cotan
+log     logarit
+ln      logn
+e
+xor
+and
+or
+not
+&       two hidden equations
+&&      three hidden equations
