@@ -28,13 +28,19 @@ int main(int argc, char const *argv[]){
 		p = p->next;
 	}
 	//edcba
+	printf("\n");
+	while (Head_st->next != NULL){
+		printf("%c", pop(&Head_st));
+	}
 	return 0;
 }
 char pop (Node** pHead){
-	Node* pNew = (*pHead)->next;
-	free(pHead);
+	char c;
+	Node* pNew = (*pHead);
 	*pHead = (*pHead)->next;
-	return pNew->data;
+	c = pNew->data;
+	free(pNew);
+	return c;
 }
 void push (char c, Node** pHead){
 	//tao them mot node chua ky tu c
