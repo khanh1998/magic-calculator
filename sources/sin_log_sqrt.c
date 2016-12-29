@@ -63,7 +63,7 @@ long double stringToNumber(char s[])
     return number;
 }
 //==============================================================================
-char * Sin(char s[])
+char * R_Sin(char s[])
 {
     static char str[100];
     long double i = stringToNumber(s);
@@ -71,7 +71,15 @@ char * Sin(char s[])
     return str;
 }
 //==============================================================================
-char * CoSin(char s[])
+char * D_Sin(char s[])
+{
+    static char str[100];
+    long double i = stringToNumber(s);
+    strcpy(str, numberToString(sin(i * (M_PI / 180)) ));
+    return str;
+}
+//==============================================================================
+char * R_CoSin(char s[])
 {
     static char str[100];
     long double i = stringToNumber(s);
@@ -79,11 +87,39 @@ char * CoSin(char s[])
     return str;
 }
 //==============================================================================
-char * Tan(char s[])
+char * D_CoSin(char s[])
 {
     static char str[100];
     long double i = stringToNumber(s);
+    strcpy(str, numberToString(cos(i * (M_PI / 180)) ));
+    return str;
+}
+//==============================================================================
+char * R_Tan(char s[])
+{
+    static char str[100];
+    long double i = stringToNumber(s);
+    // co the sai so can test lai.
+    if ( (i > 1.57078 && i < 1.5708) || (i < -1.57078 && i > -1.5708) ||
+        (i > 4.71237 && i < 4.7124) || (i < -4.71237 && i > -4.7124))
+    {
+        strcpy(str, "MATH ERROR");
+        return str;
+    }
     strcpy(str, numberToString(tan(i)));
+    return str;
+}
+//==============================================================================
+char * D_Tan(char s[])
+{
+    static char str[100];
+    long double i = stringToNumber(s);
+    if ( i == 90 || i == -90 || i == 270 || i == -270)
+    {
+        strcpy(str, "MATH ERROR");
+        return str;
+    }
+    strcpy(str, numberToString(sin(i * (M_PI / 180)) ));
     return str;
 }
 //==============================================================================
