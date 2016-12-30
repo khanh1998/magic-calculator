@@ -134,11 +134,11 @@ char * Logarit(char s[])
     else
     {
         char str1[100], str2[100];
-        int j;
+        int j, tmp;
         for(j = 0; s[j] != ','; j++)
             str1[j] = s[j];
-        j++;
-        for(int i = 0; i <= (strlen(s) - j); i++, j++)
+        tmp = ++j;
+        for(int i = 0; i <= (strlen(s) - tmp); i++, j++)
         {
             if(s[j] == ' ')
             {
